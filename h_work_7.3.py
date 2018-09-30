@@ -1,12 +1,14 @@
-x = input("Enter value x: ")
-y = input("Enter value y: ")
+z = int(input("Enter value x: "))
 
-def max_value( x, y ):
-	if x > y:
-		print( "max value = ",x)
-	elif x < y:
-		print( "max value = ",y)
+
+def value_even(x):
+	
+	if x == None or x == 0:
+		print( "Value x = 0 or not enter! ")
+	elif x % 2 == 0:
+		print( "Value x even. ")
 	else:
-		print( "value  x = y ")	  
-    
-max_value(x,y)
+		print( "Value x not even. ")
+		
+	      
+value_even(z)

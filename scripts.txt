@@ -1,0 +1,17 @@
+ffmpeg -i Gravity.Falls.S02E03.The.Golf.War.1080p.WEB-DL.AAC2.0.H.264-iT00NZ.mkv -map 0:0 -map 0:2 -map 0:1 -acodec copy -vcodec copy -scodec copy Gravity.Falls.S02E0333.mkv
+ffmpeg -i Gravity.Falls.S02E04.Sock.Opera.1080p.WEB-DL.AAC2.0.H.264-iT00NZ.mkv -map 0:0 -map 0:2 -map 0:1 -acodec copy -vcodec copy -scodec copy Gravity.Falls.S02E04.mkv 
+
+
+См.тут: Сохранение видео в ffmpeg без компрессии
+
+Грубо - сначала ffprobe определяешь, что внутри матрешки, какие номера потоков.
+Допустим, внутри:
+0 - видео,
+1 и 2 - соответственно, англ и рус звук,
+3 и 4 - соответственно, англ и рус субтитры.
+
+Тогда чтобы поменять местами англ и рус звук и субтитры делаешь:
+ffmpeg -i input.mkv -map 0:0 -map 0:2 -map 0:1 -map 0:4 -map 0:3 -acodec copy -vcodec copy -scodec copy output.mkv
+Добавление от 24.06.2013 11:57:
+
+И запускаешь батчем на всей папке со своими матрешками.

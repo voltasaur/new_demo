@@ -1,7 +1,6 @@
 pH = float(input("Enter the requested pH: "))
 
 def answer_pH(val):
-
 	if val == 3.0 :
 		print ("Apple juice.", val, "pH")
 	elif val == 5.5:
@@ -10,6 +9,7 @@ def answer_pH(val):
 		print ("Hand soap.", val, "pH")
 	else:
 		print ("Enter error.")
+			
 
 answer_pH(pH)
 	
